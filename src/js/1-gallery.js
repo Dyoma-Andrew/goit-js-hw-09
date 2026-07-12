@@ -69,7 +69,6 @@ const images = [
 
 const galleryContainer = document.querySelector('.gallery');
 
-// Створення розмітки згідно з новим шаблоном
 const galleryMarkup = images
   .map(
     ({ preview, original, description }) => `
@@ -86,12 +85,10 @@ const galleryMarkup = images
   )
   .join('');
 
-// Додавання елементів у DOM
 galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
 
-// Ініціалізація SimpleLightbox (поза межами функцій, після додавання в DOM)
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt', // Беремо підпис з атрибута alt
-  captionPosition: 'bottom', // Розташування підпису знизу
-  captionDelay: 250, // Затримка появи 250 мс
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
 });

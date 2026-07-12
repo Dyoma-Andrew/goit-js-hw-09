@@ -1,0 +1,83 @@
+/* Центрируем контейнер на странице */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Стили формы */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 360px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Лейблы (подписи над инпутами) */
+.form-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+/* Инпуты и Текстовая область */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+  color: #2e2f42;
+  box-sizing: border-box;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0, 1);
+}
+
+.form-textarea {
+  resize: none;
+}
+
+/* Состояния полей (Normal -> Hover -> Focus) */
+.form-input:hover,
+.form-textarea:hover {
+  border-color: #000000;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #4e75ff; /* Синий фокус из макета */
+}
+
+/* Кнопка Submit */
+.form-btn {
+  align-self: flex-start;
+  padding: 8px 16px;
+  min-width: 95px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0, 1);
+}
+
+.form-btn:hover {
+  background-color: #6c8cff;
+}
